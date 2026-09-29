@@ -104,7 +104,7 @@ int find(Node *p,int x){      //这里定义了一个查找元素的函数
 
 
 
-void change(Node*p,int x,int y){     //这里定义了一个更改date值的1函数
+int change(Node*p,int x,int y){     //这里定义了一个更改date值的1函数
   
   while (p!=NULL && p->date != x)   //由find函数改编，就是找到要改的数然后改变这一节点的date值
   {

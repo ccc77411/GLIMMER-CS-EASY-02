@@ -20,10 +20,10 @@ typedef struct Node
 (这里为了方便查看，我把每一个定义的函数单独提出来了,如果不想看的话可以直接跳到最后) 
 ### 定义头节点  
 ````
-Node *t;
-t->date=0;        //定义头节点
-t->next=NULL;
-Node *head=t;
+Node t;
+t.date=0;        //定义头节点
+t.next=NULL;
+Node *head=&t;
 ````   
 ### 添加元素  
 #### 创造新节点
@@ -95,7 +95,7 @@ int find(Node *p,int x){      //这里定义了一个查找元素的函数
 ### 删除和更改  
 #### 更改  
 ````  
-void change(Node*p,int x,int y){     //这里定义了一个更改date值的1函数
+int change(Node*p,int x,int y){     //这里定义了一个更改date值的1函数
   
   while (p!=NULL && p->date != x)   //由find函数改编，就是找到要改的数然后改变这一节点的date值
   {

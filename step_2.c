@@ -11,10 +11,10 @@ typedef struct Node {
   
 
 
-Node *t;
-t->date=0;        //定义头节点
-t->next=NULL;
-Node *head=t;
+Node t;
+t.date=0;        //定义头节点
+t.next=NULL;
+Node *head=&t;
 
 
 
